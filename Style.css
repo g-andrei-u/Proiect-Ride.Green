@@ -172,6 +172,7 @@ main {
 }
 
 #section-1 div {
+    display: inline;
     color: green;
 }
 

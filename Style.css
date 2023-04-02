@@ -1,0 +1,238 @@
+/* GENERAL */   
+
+body {
+    margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Inter', sans-serif;
+}
+
+h1 {
+    font-size: 80px;
+    margin: 20px 0;
+}
+
+h2 {
+    font-size: 55px;
+}
+
+h3, a {
+    font-size: 20px;
+}
+
+h4 {
+    font-size: 16px;
+}
+
+h5 {
+    font-size: 12px;
+}
+
+a {
+    font-family: 'Inconsolata', monospace;
+}
+
+a:hover {
+    cursor: pointer;
+    transition: font-size 300ms;
+    font-size: 21px;
+    text-decoration: underline;
+}
+
+li {
+    font-family: 'Inconsolata', monospace;
+    padding: 20px 0;
+}
+
+
+/* HAMBURGER */
+
+#sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    display: block;
+    background-color: #f1f1f1;
+    width: 40%;
+    height: 100vw;
+    padding: 40px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    overflow-x: hidden;
+    transition: 0.5s;
+    transform: translateX(1000px);
+}
+
+.ham-el {
+    display: block;
+}
+
+#sidebar input {
+    font-family: "Fira Sans", sans-serif;
+    height: 55px;
+    width: 350px;
+    border: 1px solid rgba(0, 0, 0, 0.358);
+    border-radius: 20px;
+    font-size: 18px;
+    padding-left: 8px;
+}
+
+#sidebar.open {
+    transform: translateX(0);
+}
+
+#list {
+    display: none;
+}
+
+#list a {
+    display: block;
+    margin-top: 5px;
+}
+
+/* HEADER */
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 110px;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 0 10px;
+}
+
+header div {
+    display: flex;
+    align-items: center;
+    grid-column-start: 1;
+    grid-column-end: 1;
+}
+
+header div h1 {
+    font-size: 50px;
+    text-transform: uppercase;
+}
+
+header nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+header nav a {
+    margin: 0 20px;
+}
+
+.start-now {
+    background-color: #7140eb;
+    color: white;
+    font-family: "Fira Sans", sans-serif;
+    font-size: 19px;
+    word-spacing: 3px;
+    letter-spacing: 1px;
+    padding: 10px 35px;
+    border: 1px solid rgba(0, 0, 0, 0.592);
+    border-radius: 25px;
+}
+
+.start-now:hover {
+    cursor: pointer;
+    transition: background-color 400ms;
+    background-color: #4a2d92;
+}
+
+
+/* MAIN */ 
+
+main {
+    margin-top: 110px;
+    box-sizing: border-box;
+}
+
+
+/* SECTION 1 */ 
+
+#section-1 {
+    background-image: url(./Images/at.zero-emissionland.jpg);
+    background-position: 50%;
+    color: black;
+    padding: 230px 80px;
+}
+
+
+/* SECTION 2 */
+
+#mission {
+    box-sizing: border-box;
+    width: 100%;
+    background-color: #e5ebed;
+    padding: 20px 80px;
+}
+
+
+/* SECTION 3 */ 
+
+#space {
+    box-sizing: border-box;
+    background-image: url(./Images/image\ \(2\).webp);
+    width: 100%;
+    height: 700px;
+}
+
+
+/* SECTION 4 */
+
+.bikes {
+    box-sizing: border-box;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: #e5ebed;
+    padding: 80px 80px;
+}
+
+.bikes div img {
+    width: 900px;
+    height: 500px;
+}
+
+
+/* FOOTER */ 
+
+footer {
+    box-sizing: border-box;
+    width: 100%;
+    background-color: #3D9418;
+    color: white;
+    padding: 50px 80px;
+}
+
+footer form {
+    width: 40%;
+}
+
+#email {
+    height: 55px;
+    width: 350px;
+    border: 1px solid rgba(0, 0, 0, 0.358);
+    border-radius: 20px;
+    font-size: 18px;
+    padding-left: 8px;
+}
+
+footer form label {
+    font-family: "Fira Sans", sans-serif;
+    font-size: 13px;
+}

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" type="text/css" href="./Style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans&family=Inconsolata&family=Inter&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="loadSearchData()">
+    <header>
+        <div>
+            <h1>Ride.Green</h1>
+        </div>
+        <nav>
+            <a>Our Mission</a>
+            <a>Bikes</a>
+            <a>For Business</a>
+            <div>
+                <button class="start-now">Start Now</button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="section-1">
+            <h1>Discover your new eride</h1>
+            <h3>Save the planet with an Ebike.</h3>
+        </section>
+
+        <section id="mission">
+            <h2>Ebikes</h2>
+            <h3>Designed and engineered in London.</h3>
+            <h4>We are dedicated to making commutes easier and greener.</h4>
+            <ul>
+                <li><strong>Dance helps your team move with purpose.</strong> Promote greener, more active commutes by offering ebikes and emopeds.</li>
+                <li><strong>Engage your team.</strong> 53% of Europeans are more inclined to work for an employer that offered an ebike subscription as a benefit.</li>
+                <li><strong>It's easy:</strong> No minimums, no admin. Members get their own tech-connected ebike with included repairs.</li>
+                <li><strong>Plus:</strong> It's fun!</li>
+            </ul>
+            <button class="start-now">Start Now</button>
+        </section>
+
+        <section id="space">
+        </section>
+
+        <section class="bikes">
+            <div>
+                <h3>Dance One</h3>
+                <ul>
+                    <li><strong>Optimized</strong> for 160-200 cm tall</li>
+                    <li><strong>Max total</strong> weight 120 kg</li>
+                    <li><strong>Weight</strong> 21 kg</li>
+                    <li><strong>Battery</strong> range Up to 55 km</li>
+                    <li><strong>Charging time</strong> 100% in 3 hours. 80% in 2 hours.</li>
+                    <li><strong>Assist speed</strong> 25 km/h top speed</li>
+                </ul>
+            </div>
+            <div>
+                <img src="./Images/image.webp">
+            </div>
+        </section>
+
+        <section class="bikes">
+            <div>
+                <h3>Dance Moped</h3>
+                <ul>
+                    <li><strong>Riders Up</strong> to 2 riders Supports up to 165 kg in weight</li>
+                    <li><strong>Weight Approximately</strong> 89 kg, including battery</li>
+                    <li><strong>Battery</strong> range Up to 65 km with Long Range battery Up to 50 km with Standard Range battery</li>
+                    <li><strong>Charging time</strong> 100% recharged in 6-8 hours</li>
+                    <li><strong>Top speed</strong> 45 km/h top speed</li>
+                </ul>
+            </div>
+            <div>
+                <img src="./Images/image (1).webp">
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <h2>Stay up to speed</h3>
+        <h3>Sign up to get the latest Dance offers, updates, and tips straight to your inbox.</h4>
+        <form method="get">
+            <input type="email" id="email" placeholder="your@email.com">
+            <br>
+            <input type="checkbox" id="checkbox" name="checkbox">
+            <label for="checkbox">By checking this box, you allow Dance to collect data relating to the Dance newsletter, including whether it has been opened and clicked through. For more information, read our privacy policy. You’re free to unsubscribe at any time.</label>
+        </form>
+    </footer>
+
+    <div id="sidebar">
+        <h2 class="items">Where do you live?</h2>
+        <h4 class="items">Our service currently covers London. But, we're expanding fast and look forward to riding together!</h4>
+        <input type="search" placeholder="City" id="search" onkeyup="search()">
+        <div id="list">
+        </div>
+    </div>
+    <script src="./main.js"></script>
+</body>
+</html>

@@ -1,20 +1,72 @@
+// HAMBURGER
+const hamburger = document.getElementById('hamburger');
+const nav = document.getElementById('nav');
+const aLink = document.getElementsByTagName('a');
+const main = document.getElementsByTagName('main')[0];
+const footer = document.getElementsByTagName('footer')[0];
+
+hamburger.onclick = () => {
+
+    if(!nav.active) {
+
+        nav.classList.toggle('active');
+        hamburger.classList.toggle('active');
+    }
+
+    main.onclick = () => {
+
+        if(document.getElementsByClassName('active')) {
+
+            nav.classList.remove('active');
+            hamburger.classList.remove('active');
+        }  
+    }
+
+    footer.onclick = () => {
+
+        if(document.getElementsByClassName('active')) {
+
+            nav.classList.remove('active');
+            hamburger.classList.remove('active');
+        }  
+    }
+
+    for(let a in aLink) {
+
+        aLink[a].onclick = () => {
+
+            //console.log('click1')
+            if(document.getElementsByClassName('active')) {
+
+                nav.classList.remove('active');
+                hamburger.classList.remove('active');
+            }
+        }
+    }
+};
+
+
+// SIDEBAR
 const startBtn = document.getElementsByClassName('start-now');
 const sideBar = document.getElementById('sidebar');
 const body = document.getElementsByTagName('body')[0];
 const header = document.getElementsByTagName('header')[0];
-const main = document.getElementsByTagName('main')[0];
-const footer = document.getElementsByTagName('footer')[0];
+
 
 function openNav() {
-    sideBar.style.width = "40%";
+
+    sideBar.style.width = "50%";
 }
 
 function closeNav() {
+
     sideBar.style.width = "0%";
 }
 
 for (const btn of startBtn) {
+
     btn.addEventListener('click', () => {
+
         console.log('button clicked');
         sideBar.classList.toggle('open');
         openNav()
@@ -24,7 +76,9 @@ for (const btn of startBtn) {
         all.appendChild(main);
         all.appendChild(footer);
         if (sideBar.classList.contains('open')) {
+
             all.addEventListener('click', () => {
+
                 sideBar.classList.remove('open')
                 if (sideBar.classList.contains('open') === false)
                 body.appendChild(header);
@@ -37,6 +91,7 @@ for (const btn of startBtn) {
 };
 
 
+// SEARCH
 const searchBar = document.getElementById('search');
 
 const loadSearchData = () => {

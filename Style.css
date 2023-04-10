@@ -1,7 +1,7 @@
 /* GENERAL */   
 
-body {
-    margin: 0;
+html {
+    font-size: 100%;
 }
 
 h1,
@@ -14,44 +14,65 @@ h6 {
 }
 
 h1 {
-    font-size: 80px;
-    margin: 20px 0;
+    font-size: 5rem;
+    margin: 1.25rem 0;
 }
 
 h2 {
-    font-size: 55px;
+    font-size: 3.4rem;
 }
 
 h3, a {
-    font-size: 20px;
+    font-size: 1.25rem;
 }
 
 h4 {
-    font-size: 16px;
+    font-size: 1rem;
 }
 
 h5 {
-    font-size: 12px;
+    font-size: 0.75rem;
 }
 
 a {
     font-family: 'Inconsolata', monospace;
+    font-weight: 700;
+    text-decoration: none;
+    color: #7140eb;
 }
 
 a:hover {
     cursor: pointer;
     transition: font-size 300ms;
-    font-size: 21px;
+    transition: color 400ms;
+    font-size: 1.31rem;
     text-decoration: underline;
+    color: #4a2d92;
 }
 
 li {
     font-family: 'Inconsolata', monospace;
-    padding: 20px 0;
+    padding: 1.25rem 0;
 }
 
 
 /* HAMBURGER */
+
+#hamburger {
+    display: none;
+    cursor: pointer;
+    margin: 0 1rem;
+}
+
+#hamburger .bar {
+    display: block;
+    background-color: #4a2d92;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 300ms;
+    transition: all 300ms;
+}
 
 #sidebar {
     position: fixed;
@@ -59,8 +80,7 @@ li {
     right: 0;
     display: block;
     background-color: #f1f1f1;
-    width: 40%;
-    height: 100vw;
+    height: 100%;
     padding: 40px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
@@ -69,17 +89,14 @@ li {
     transform: translateX(1000px);
 }
 
-.ham-el {
-    display: block;
-}
 
 #sidebar input {
     font-family: "Fira Sans", sans-serif;
-    height: 55px;
-    width: 350px;
+    height: 3.4375rem;
+    width: 21.875rem;
     border: 1px solid rgba(0, 0, 0, 0.358);
     border-radius: 20px;
-    font-size: 18px;
+    font-size: 1.25rem;
     padding-left: 8px;
 }
 
@@ -93,22 +110,22 @@ li {
 
 #list a {
     display: block;
-    margin-top: 5px;
+    margin-top: 0.3rem;
 }
 
 /* HEADER */
 
 header {
+    box-sizing: content-box;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    height: 110px;
-    box-sizing: border-box;
+    height: 6.875rem;
     display: grid;
     grid-template-columns: 1fr 1fr;
     background-color: rgba(255, 255, 255, 0.95);
-    padding: 0 10px;
+    padding: 0 0.625rem;
 }
 
 header div {
@@ -119,7 +136,7 @@ header div {
 }
 
 header div h1 {
-    font-size: 50px;
+    font-size: 3.125rem;
     text-transform: uppercase;
 }
 
@@ -131,20 +148,21 @@ header nav {
     grid-column-end: 3;
 }
 
-header nav a {
-    margin: 0 20px;
+#nav a {
+    margin: 0 1.25rem;
 }
 
 .start-now {
     background-color: #7140eb;
     color: white;
     font-family: "Fira Sans", sans-serif;
-    font-size: 19px;
+    font-size: 1.18rem;
     word-spacing: 3px;
     letter-spacing: 1px;
-    padding: 10px 35px;
+    padding: 0.625rem 2.1875rem;
     border: 1px solid rgba(0, 0, 0, 0.592);
     border-radius: 25px;
+    margin-right: 10px;
 }
 
 .start-now:hover {
@@ -157,8 +175,8 @@ header nav a {
 /* MAIN */ 
 
 main {
-    margin-top: 110px;
-    box-sizing: border-box;
+    margin-top: 6.875rem;
+    box-sizing: content-box;
 }
 
 
@@ -167,11 +185,13 @@ main {
 #section-1 {
     background-image: url(./Images/at.zero-emissionland.jpg);
     background-position: 50%;
+    background-size: 300%;
+    background-repeat: no-repeat;
     color: black;
-    padding: 230px 80px;
+    padding: 14.375rem 5rem;
 }
 
-#section-1 div {
+.green {
     display: inline;
     color: green;
 }
@@ -183,17 +203,21 @@ main {
     box-sizing: border-box;
     width: 100%;
     background-color: #e5ebed;
-    padding: 20px 80px;
+    padding: 2.2rem 5rem;
+}
+
+#mission h2 {
+    margin-top: 1rem;
 }
 
 
 /* SECTION 3 */ 
 
 #space {
-    box-sizing: border-box;
-    background-image: url(./Images/image\ \(2\).webp);
+    background-image: url(./Images/image\ \(2\).jpg);
+    background-position: 50% 10%;
     width: 100%;
-    height: 700px;
+    height: 35rem;
 }
 
 
@@ -205,12 +229,13 @@ main {
     display: grid;
     grid-template-columns: 1fr 1fr;
     background-color: #e5ebed;
-    padding: 80px 80px;
+    padding: 5rem 5rem;
 }
 
 .bikes div img {
-    width: 900px;
-    height: 500px;
+    max-width: 100%;
+    width: 56.25rem;
+    height: 31.25rem;
 }
 
 
@@ -221,7 +246,7 @@ footer {
     width: 100%;
     background-color: #3D9418;
     color: white;
-    padding: 50px 80px;
+    padding: 3.125rem 5rem;
 }
 
 footer form {
@@ -229,15 +254,223 @@ footer form {
 }
 
 #email {
-    height: 55px;
-    width: 350px;
+    height: 3.4375rem;
+    width: 21.875rem;
     border: 1px solid rgba(0, 0, 0, 0.358);
-    border-radius: 20px;
-    font-size: 18px;
+    border-radius: 1.25rem;
+    font-size: 1.125rem;
     padding-left: 8px;
 }
 
 footer form label {
     font-family: "Fira Sans", sans-serif;
-    font-size: 13px;
+    font-size: 0.8125rem;
+}
+
+
+/* MEDIA */
+
+@media screen and (max-width: 1100px) {
+    .bikes div img {
+        max-width: 100%;
+        width: 32rem;
+        height: 18rem;
+    }
+    #space {
+        height: 30rem;
+    }
+}
+
+
+@media screen and (max-width: 850px) {
+    .bikes {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    #space {
+        height: 30rem;
+    }
+
+    #section-1 {
+        background-position: 50%;
+        background-size: 300%;
+        background-repeat: no-repeat;
+        color: black;
+        padding: 10rem 4rem;
+    }
+
+    footer form {
+        width: 80%;
+    }
+
+    #nav {
+        position: fixed;
+        right: -100%;
+        top: 6.875rem;
+        display: flex;
+        flex-direction: column;
+        background-color: #f1f1f1;
+        width: 100%;
+        text-align: center;
+        transition: 300ms;
+    }
+
+    #nav a {
+        margin: 20px 0;
+        color: #7140eb;
+    }
+
+    #nav.active {
+        right: 0;
+    }
+
+    #hamburger {
+        display: block;
+    }
+
+    #hamburger.active {
+        border: 3px solid red;
+        transition: border 200ms;
+    }
+
+    #hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    #hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    #hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+}
+
+
+@media screen and (max-width: 500px) {
+    h1 {
+        padding: 6px;
+        font-size: 3.2rem;
+        margin: 0;
+        background-color: white;
+
+    }
+
+    header div h1 {
+        font-size: 1.8rem;
+    }
+
+    h2 {
+        margin-top: 0.5rem;
+        font-size: 2rem;
+    }
+
+    #mission h2 {
+        font-size: 2.4rem;
+    }
+
+    h3, a {
+        font-size: 1rem;
+    }
+
+    #sidebar input {
+        height: 3rem;
+        width: 13rem;
+        font-size: 1.25rem;
+    }
+
+    .start-now {
+        font-size: 1.1rem;
+        padding: 0.8rem 1.2rem;
+        margin-right: 16px;
+    }
+
+    header .start-now {
+        font-size: 1.1rem;
+        padding: 0.4rem 0.7rem;
+        margin-right: 16px;
+    }
+
+    #section-1 h3 {
+        font-size: 1.2rem;
+        background-color: white;
+        margin: 0;
+    }
+
+    .bikes div img {
+        width: 15rem;
+        height: 8rem;
+    }
+
+    #space {
+        background-size: 300%;
+        height: 20rem;
+    }
+
+    #section-1 {
+        background-position: 50%;
+        background-size: 400%;
+        background-repeat: no-repeat;
+        color: black;
+        padding: 10rem 4rem;
+    }
+
+    #mission {
+        padding: 2rem;
+    }
+
+    .bikes {
+        padding: 2rem;
+    }
+
+    #email {
+        height: 3.4rem;
+        width: 13rem;
+        font-size: 1.125rem;
+        padding-left: 8px;
+    }
+
+    footer form {
+        width: 100%;
+    }
+    
+}
+
+@media screen and (max-width: 300px) {
+    h1 {
+        padding: 6px;
+        font-size: 2rem;
+        margin: 0;
+        background-color: rgb(255, 255, 255);
+    }
+    
+    header div h1 {
+        font-size: 1.3rem;
+    }
+
+    #mission {
+        padding: 1rem;
+    }
+
+    #mission h2 {
+        font-size: 1.8rem;
+    }
+
+    .bikes {
+        padding: 1rem;
+    }
+
+    footer {
+        padding: 1rem;
+    }
+
+    #email {
+        height: 3.2rem;
+        width: 10rem;
+        font-size: 1.125rem;
+        padding-left: 8px;
+    }
 }
